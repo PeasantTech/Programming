@@ -12,6 +12,7 @@ let callList = []; let playGame = false;
 // generateCardButton.addEventListener("click", generateFiveVals(1,15));
 genCardBtn.addEventListener("click", createBingoCard);
 pullNumBtn.addEventListener("click", rollTheDice);
+bingoTiles.addEventListener("click", addMarker);
 
 function createBingoCard() {
     callList = [];
@@ -78,3 +79,6 @@ function rollTheDice () {
     
 }
 
+function addMarker () {
+    document.th.className = "marked-tile";
+}
