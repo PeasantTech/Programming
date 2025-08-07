@@ -1,0 +1,70 @@
+:root {
+    --color-background: #222222;
+    --color-font: #FFFFFF;
+    --color-border: #333333;
+    --color-button: #DDDDDD;
+    --color-link: #888888;
+    --color-linkhover: #AAAAAA;
+    --color-text: #B9b9b9;
+    --color-border-top: #777777;
+    --color-footer: #333333;
+    --color-navbar: #444444;
+
+}
+
+*{
+    border: solid 1px var(--color-border)
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text)
+}
+
+.footer {
+    border-top: solid 1px var(--color-border-top);
+    background: var(--color-footer)
+}
+
+.nav-directory {
+    border-right: 1px solid white;
+}
+
+.top-navbar{
+    background: var(--color-navbar);
+}
+
+.nav-link {
+    color: var(--color-text);
+    border-top: solid 1px var(--color-border-top);
+}
+
+.section-header {
+    border-bottom: solid 2px var(--color-border-top);
+}
+
+a {
+    color: var(--color-link);
+}
+
+a:hover {
+    color: var(--color-linkhover);
+}
+
+.field-section {
+    background: #444;
+}
+
+.textarea-comments {
+    background-color: var(--color-link);
+    color: var(--color-background);
+}
+
+.textarea-comments:value {
+    color: var(--color-text);
+}
+
+.submit-button {
+    border: solid 2px var(--color-border);
+    background-color: var(--color-button);
+}
