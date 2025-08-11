@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Some Project</title>
-        <link rel="stylesheet" href="../colors.css">
-        <link rel="stylesheet" href="styles.css"/>
-    </head>
-    <body>
-            <header>
-                JSON Manipulation Testing
-            </header>
-            <div class="item-input">
-                <input id="name-input" class="object-name" placeholder="item name">
-                <button id="submit-button" class="search-button">Enter!</button>
-            </div>
-            <div class="json-parse">
 
-            </div>
-        <script src="./testing.js"></script>
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Some Project</title>
+    <link rel="stylesheet" href="../colors.css">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        JSON Manipulation Testing
+    </header>
+    <div class="search-type">
+        <button id="key-value-search-button" class="search-button">Key : Value</button>
+        <button id="object-id-search-button" class="search-button">Object ID</button>
+
+    </div>
+    <div class="key-value-search hide">
+        <input value="" type="text" id="search-key-input" class="object-name" placeholder="Key name">
+        <input value="" type="text" id="search-value-input" class="object-name" placeholder="Value name">
+    </div>
+    <div class="object-value-search hide">
+        <input value="" type="text" id="object-value-input" class="object-name" placeholder="Object ID">
+    </div>
+    <button id="submit-button" class="search-button">Enter!</button>
+    <div class="json-parse">
+
+    </div>
+    <script src="./testing.js"></script>
+</body>
+
 </html>
