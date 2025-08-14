@@ -10,7 +10,7 @@ const submitBtn = document.getElementById("submit-button");
 let objectData = null;
 let KeyValSelect = 0;
 let ObjIDSelect = 0;
-let result = {};
+let result = [];
 
 async function getData() {
   const url = "http://127.0.0.1:3000/HTML/JSONManip/JSON/Objects.json";

@@ -1,20 +1,25 @@
-const parentObject = {
-    obj1: { name: "Alpha", value: 10 },
-    obj2: { name: "Beta", value: 20 },
-    obj3: { name: "Gamma", value: 20 },
-    obj4: { name: "Delta", value: 20 },
-    obj5: { name: "Epsilon", value: 20 },
-    obj6: { name: "Zeta", value: 20 }
-};
 
-console.log(parentObject);
+    const obj1 = { name: "Alpha", value: 10 };
+    const obj2 = { name: "Beta", value: 20 };
+    const obj3 = { name: "Gamma", value: 20 };
+    const obj4 = { name: "Delta", value: 20 };
+    const obj5 = { name: "Epsilon", value: 20 };
+    const obj6 = { name: "Zeta", value: 20 };
 
-Object.entries(parentObject).forEach(([key, value]) => {
-    if (parentObject[key] === "Alpha") {
-        const returnObj = parentObject[key];
-        console.log(returnObj);
-    }
-})
+    const parentObj = {obj1, obj2, obj3, obj4, obj5};
+    console.log(parentObj);
+    console.log(Object.entries(parentObj).forEach(() => {if (parentObj.key === "Gamma") {console.log(this.object[key]);}}));
+    // Object.entries(parentObj).forEach(key);
+
+// console.log(parentObject);
+
+// Object.entries(parentObject).forEach(([key, value]) => {
+//     console.log(parentObject[key], key);
+//     if (parentObject[key][key] === "Alpha") {
+//         const returnObj = parentObject[key];
+//         console.log(returnObj);
+//     }
+// })
 
 
 // const parentObject = {
