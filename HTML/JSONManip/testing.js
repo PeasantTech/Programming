@@ -6,6 +6,7 @@ const objIDSearch = document.getElementById("object-id-search");
 const keyValBtn = document.getElementById("key-value-search-button");
 const objIDBtn = document.getElementById("object-id-search-button");
 const submitBtn = document.getElementById("submit-button");
+const displaySearch = document.getElementById("search-display");
 
 let objectData = null;
 let KeyValSelect = 0;
@@ -21,7 +22,7 @@ async function getData() {
     }
 
     objectData = await response.json();
-    console.log(objectData);
+    // console.log(objectData);
   } catch (error) {
     console.error(error.message);
   }
@@ -30,17 +31,26 @@ async function getData() {
 const findObject = (key, value, object, parent) => {
   // console.log (key, value);
   if (KeyValSelect) {
-    for (const objKey in parent) {
-      if (parent[objKey][key] === value) {
-        const resultLength = result.length;
-        result[resultLength] = {[objKey] : parent[objKey]};
-      } 
-    }
-    return result;
+    let i = 0;
+    Object.entries(parent).forEach((objKey) => {
+      console.log(i);
+      i++;
+      // if (parent[objKey][key] === value) {
+      //   console.log(i);
+      // }
+    })
+    // for (const objKey in parent) {
+    //   if (parent[objKey][key] === value) {
+    //     console.log(this);
+    //     // const resultLength = result.length;
+    //     // result[resultLength] = {objKey : parent[objKey]};
+    //   } 
+    // }
+    // return result;
   }
 
   else if (ObjIDSelect) {
-    return {[object] : parent[object]};
+    return { [object]: parent[object] };
   }
 
   else {
@@ -62,18 +72,19 @@ const searchObject = () => {
   // console.log("searchVal", searchVal);
 }
 
-// const displayKeyVal = () => {
-//   KeyValSelect = true; ObjIDSelect = false;
+const displayKeyVal = () => {
+  KeyValSelect = true;
+  ObjIDSelect = false;
+  keyValSearch.classList.remove("hide");
+  objIDSearch.classList.add("hide");
+};
 
-// };
-  const displayKeyVal = () => { KeyValSelect = true; ObjIDSelect = false; keyValSearch.classList.remove("hide"); objIDSearch.classList.add("hide") };
-// const displayObjId = () => {
-//   KeyValSelect = false; ObjIDSelect = true;
-
-// };
-  const displayObjId = () => { KeyValSelect = false; ObjIDSelect = true; keyValSearch.classList.add("hide"); objIDSearch.classList.remove("hide") };
-
-
+const displayObjId = () => {
+  KeyValSelect = false;
+  ObjIDSelect = true;
+  keyValSearch.classList.add("hide");
+  objIDSearch.classList.remove("hide");
+};
 
 keyValBtn.addEventListener("click", displayKeyVal);
 objIDBtn.addEventListener("click", displayObjId);
@@ -82,10 +93,10 @@ submitBtn.addEventListener("click", searchObject);
 
 window.addEventListener("load", getData);
 
-    // <div id="key-value-search" class="key-value-search hide">
-    //     <input value="" type="text" id="search-key-input" class="object-name" placeholder="Key name">
-    //     <input value="" type="text" id="search-value-input" class="object-name" placeholder="Value name">
-    // </div>
-    // <div id="object-id-search" class="object-id-search hide">
-    //     <input value="" type="text" id="object-id-input" class="object-name" placeholder="Object ID">
-    // </div>
+// <div id="key-value-search" class="key-value-search hide">
+//     <input value="" type="text" id="search-key-input" class="object-name" placeholder="Key name">
+//     <input value="" type="text" id="search-value-input" class="object-name" placeholder="Value name">
+// </div>
+// <div id="object-id-search" class="object-id-search hide">
+//     <input value="" type="text" id="object-id-input" class="object-name" placeholder="Object ID">
+// </div>

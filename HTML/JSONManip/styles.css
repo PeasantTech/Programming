@@ -1,7 +1,11 @@
 button:hover{
-    background: red;
+    background: #777777;
 }
 
 .hide {
     visibility: hidden;
+}
+
+.search-options {
+    border :solid 1px red;
 }
