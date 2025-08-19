@@ -1,0 +1,4 @@
+booker - raccoon
+bitsy - mouse
+    north is whatever way youre facing
+hazel - squirrel
